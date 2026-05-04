@@ -1,3 +1,5 @@
+# game/core/os_ui.rpy
+
 # ==========================================
 # 1. THE TERMINAL (Left-Aligned Boot Sequence)
 # ==========================================
@@ -27,6 +29,30 @@ style term_text:
     outlines [(1, "#000000", 1, 1)]
     layout "tex"
     xalign 0.0 
+
+
+# ==========================================
+# 1.5 TERMINAL LOGIN PROMPT
+# ==========================================
+
+screen terminal_login(): 
+    zorder 50 # Pops up over everything
+    
+    window:
+        style "term_window"
+        vbox:
+            spacing 10
+            
+            text "INITIALIZING BOOT SEQUENCE.... OK." style "term_text"
+            text "LOADING KERNEL MODULES.... OK." style "term_text"
+            text "FINDING NETWORK.... CONNECTION ESTABLISHED." style "term_text"
+            text "" style "term_text" 
+            text "SYSTEM ACCESS GRANTED." style "term_text"
+            text "" style "term_text" 
+            
+            hbox:
+                text "Enter your proxy identifier: " style "term_text"
+                input id "input" style "term_text" length 15 color "#FFFFFF"
 
 
 # ==========================================
@@ -113,14 +139,13 @@ style os_nvl_button_text:
 
 
 # ==========================================
-# 3. TERMINAL INPUT PROMPT
+# 3. GLOBAL FALLBACK INPUT PROMPT
 # ==========================================
 
 screen input(prompt):
-    zorder 50 # Highest priority, forces player attention over everything else
-    style_prefix "term_input"
+    zorder 50 # Highest priority
+    style_prefix "os_input"
 
-    # A sleek, centered OS Terminal box
     frame:
         xalign 0.5
         yalign 0.5
@@ -130,20 +155,17 @@ screen input(prompt):
 
         vbox:
             spacing 20
-            # The prompt text
-            text prompt style "term_prompt" 
-            # The actual typing field
-            input id "input" style "term_input_field"
+            text prompt style "os_input_prompt" 
+            input id "input" style "os_input_field"
 
-# Custom styles for the terminal input
-style term_prompt:
+style os_input_prompt:
     color "#08D3A4" # Empathy Green[cite: 6]
     size 22
     bold True
     textalign 0.5
     xalign 0.5
 
-style term_input_field:
+style os_input_field:
     color "#FFFFFF"
     size 28
     xalign 0.5

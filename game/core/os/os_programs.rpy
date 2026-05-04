@@ -1,21 +1,75 @@
+# game/core/os_programs.rpy
+
 # ==========================================
 # DESKTOP ENVIRONMENT
 # ==========================================
 
 screen os_desktop_interface():
-    zorder 10 # Base OS layer, sits behind the chat and terminal
+    zorder 10 # Base OS layer
     
-    # The "Invasive" Overlay
-    add "images/general/webcam_overlay.png" 
+    # Background (you can swap this for the webcam POV later)
+    add "images/bg/bg_room_pitch_black.png" 
 
-    # Fake Folder System
-    if perm_pc_files:
-        imagebutton:
-            xpos 100 ypos 100
-            idle "gui/button/folder_idle.png"
-            hover "gui/button/folder_hover.png"
-            action Show("os_file_viewer", filename="poems.txt")
-            tooltip "Open Folder"
+    # The "Invasive" Overlay
+    # add "images/general/webcam_overlay.png" 
+
+    # Desktop Icons (Programs)
+    vbox:
+        xpos 30 
+        ypos 30
+        spacing 40
+        
+        # Program 1: The Chat App
+        vbox:
+            spacing 5
+            imagebutton:
+                xalign 0.5
+                idle "gui/bubble.png" 
+                hover Transform("gui/bubble.png", matrixcolor=BrightnessMatrix(0.2))
+                action Show("os_nvl") 
+            text "Chat.exe" color "#D6D6D6" size 16 xalign 0.5 outlines [(1, "#000", 1, 1)]
+
+        # Program 2: File Explorer (Bridge Folder)
+        if perm_pc_files: 
+            vbox:
+                spacing 5
+                imagebutton:
+                    xalign 0.5
+                    idle "gui/window_icon.png" 
+                    hover Transform("gui/window_icon.png", matrixcolor=BrightnessMatrix(0.2))
+                    action Show("os_file_viewer", filename="bridge/") 
+                text "bridge/" color "#D6D6D6" size 16 xalign 0.5 outlines [(1, "#000", 1, 1)]
+
+    # Call the taskbar to render on top of the desktop
+    use os_taskbar
+
+
+# ==========================================
+# TASKBAR
+# ==========================================
+
+screen os_taskbar():
+    zorder 11 # Sits just above the desktop background
+    
+    frame:
+        xfill True
+        ysize 50
+        yalign 1.0 # Pinned to the bottom
+        background Solid("#25171D") # Base darkness/isolation color[cite: 6]
+        
+        hbox:
+            yalign 0.5
+            xpos 20
+            spacing 20
+            
+            # Start Menu Button
+            textbutton "SYS":
+                text_color "#08D3A4" # Empathy Green[cite: 6]
+                text_bold True
+                action NullAction() # Replace with a menu toggle later
+            
+            # Clock (Optional OS immersion)
+            text "11:42 PM" color "#D6D6D6" yalign 0.5 xpos 1750
 
 
 # ==========================================
@@ -23,7 +77,7 @@ screen os_desktop_interface():
 # ==========================================
 
 screen os_window_template(app_title, content_text):
-    zorder 15 # Floats above the desktop, but behind the chat (zorder 20)
+    zorder 15 # Floats above the desktop (10) and taskbar (11), behind chat (20)
     
     frame:
         xalign 0.5
