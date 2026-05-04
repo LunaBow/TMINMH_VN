@@ -1,0 +1,193 @@
+game
+├── .sixth
+│   └── skills
+├── .vscode
+│   └── settings.json
+├── audio
+│   ├── music
+│   └── sfx
+├── cache
+│   ├── bytecode-312.rpyb
+│   ├── py3analysis.rpyb
+│   ├── screens.rpyb
+│   └── shaders.txt
+├── core
+│   ├── char.rpy
+│   ├── char.rpyc
+│   ├── os
+│   │   ├── os_chat.rpy
+│   │   ├── os_chat.rpyc
+│   │   ├── os_programs.rpy
+│   │   ├── os_programs.rpyc
+│   │   ├── os_ui.rpy
+│   │   └── os_ui.rpyc
+│   ├── os_chat.rpyc
+│   ├── screens.rpy
+│   ├── screens.rpyc
+│   ├── windows.rpy
+│   └── windows.rpyc
+├── fonts
+│   ├── CoralPixels-Regular.ttf
+│   ├── JetBrainsMonoNL-Light.ttf
+│   ├── JetBrainsMonoNL-Regular.ttf
+│   ├── Montserrat-VariableFont_wght.ttf
+│   ├── RubikGlitch-Regular.ttf
+│   ├── Sad Films.otf
+│   ├── SpaceGrotesk-Light.ttf
+│   ├── SpaceGrotesk-Medium.ttf
+│   ├── SpaceGrotesk-Regular.ttf
+│   ├── SpaceGrotesk-VariableFont_wght.ttf
+│   ├── SpecialElite-Regular.ttf
+│   └── VT323-Regular.ttf
+├── general.rpy
+├── general.rpyc
+├── gui
+│   ├── bar
+│   │   ├── bottom.png
+│   │   ├── left.png
+│   │   ├── right.png
+│   │   └── top.png
+│   ├── bubble.png
+│   ├── button
+│   │   ├── check_foreground.png
+│   │   ├── check_selected_foreground.png
+│   │   ├── choice_hover_background.png
+│   │   ├── choice_idle_background.png
+│   │   ├── hover_background.png
+│   │   ├── idle_background.png
+│   │   ├── quick_hover_background.png
+│   │   ├── quick_idle_background.png
+│   │   ├── radio_foreground.png
+│   │   ├── radio_selected_foreground.png
+│   │   ├── slot_hover_background.png
+│   │   └── slot_idle_background.png
+│   ├── frame.png
+│   ├── game_menu.png
+│   ├── main_menu.png
+│   ├── namebox.png
+│   ├── notify.png
+│   ├── nvl.png
+│   ├── overlay
+│   │   ├── confirm.png
+│   │   ├── game_menu.png
+│   │   └── main_menu.png
+│   ├── phone
+│   │   ├── bar
+│   │   │   ├── bottom.png
+│   │   │   ├── left.png
+│   │   │   ├── right.png
+│   │   │   └── top.png
+│   │   ├── button
+│   │   │   ├── check_foreground.png
+│   │   │   ├── check_selected_foreground.png
+│   │   │   ├── choice_hover_background.png
+│   │   │   ├── choice_idle_background.png
+│   │   │   ├── hover_background.png
+│   │   │   ├── idle_background.png
+│   │   │   ├── radio_foreground.png
+│   │   │   ├── radio_selected_foreground.png
+│   │   │   ├── slot_hover_background.png
+│   │   │   └── slot_idle_background.png
+│   │   ├── nvl.png
+│   │   ├── overlay
+│   │   │   ├── game_menu.png
+│   │   │   └── main_menu.png
+│   │   ├── scrollbar
+│   │   │   ├── horizontal_hover_bar.png
+│   │   │   ├── horizontal_hover_thumb.png
+│   │   │   ├── horizontal_idle_bar.png
+│   │   │   ├── horizontal_idle_thumb.png
+│   │   │   ├── vertical_hover_bar.png
+│   │   │   ├── vertical_hover_thumb.png
+│   │   │   ├── vertical_idle_bar.png
+│   │   │   └── vertical_idle_thumb.png
+│   │   ├── slider
+│   │   │   ├── horizontal_hover_bar.png
+│   │   │   ├── horizontal_hover_thumb.png
+│   │   │   ├── horizontal_idle_bar.png
+│   │   │   ├── horizontal_idle_thumb.png
+│   │   │   ├── vertical_hover_bar.png
+│   │   │   ├── vertical_hover_thumb.png
+│   │   │   ├── vertical_idle_bar.png
+│   │   │   └── vertical_idle_thumb.png
+│   │   └── textbox.png
+│   ├── scrollbar
+│   │   ├── horizontal_hover_bar.png
+│   │   ├── horizontal_hover_thumb.png
+│   │   ├── horizontal_idle_bar.png
+│   │   ├── horizontal_idle_thumb.png
+│   │   ├── vertical_hover_bar.png
+│   │   ├── vertical_hover_thumb.png
+│   │   ├── vertical_idle_bar.png
+│   │   └── vertical_idle_thumb.png
+│   ├── skip.png
+│   ├── slider
+│   │   ├── horizontal_hover_bar.png
+│   │   ├── horizontal_hover_thumb.png
+│   │   ├── horizontal_idle_bar.png
+│   │   ├── horizontal_idle_thumb.png
+│   │   ├── vertical_hover_bar.png
+│   │   ├── vertical_hover_thumb.png
+│   │   ├── vertical_idle_bar.png
+│   │   └── vertical_idle_thumb.png
+│   ├── textbox.png
+│   ├── thoughtbubble.png
+│   └── window_icon.png
+├── gui.rpy
+├── gui.rpyc
+├── images
+│   ├── bg
+│   │   └── bg_room_pitch_black.png
+│   ├── char
+│   ├── general
+│   │   ├── splash_logo.mp4
+│   │   └── splash_logo.png
+│   ├── movie
+│   └── ui
+│       ├── icons
+│       └── wallpapers
+├── libs
+│   └── libs.txt
+├── options.rpy
+├── options.rpyc
+├── saves
+│   ├── auto-1-LT1.save
+│   ├── auto-10-LT1.save
+│   ├── auto-2-LT1.save
+│   ├── auto-3-LT1.save
+│   ├── auto-4-LT1.save
+│   ├── auto-5-LT1.save
+│   ├── auto-6-LT1.save
+│   ├── auto-7-LT1.save
+│   ├── auto-8-LT1.save
+│   ├── auto-9-LT1.save
+│   ├── navigation.json
+│   ├── persistent
+│   ├── _reload-1-LT1.save
+│   ├── _reload-2-LT1.save
+│   ├── _tracesave-1-LT1.save
+│   ├── _tracesave-2-LT1.save
+│   ├── _tracesave-3-LT1.save
+│   ├── _tracesave-4-LT1.save
+│   ├── _tracesave-5-LT1.save
+│   └── _tracesave-6-LT1.save
+├── scenes.rpy
+├── scenes.rpyc
+├── script
+│   ├── act1
+│   │   ├── scriptA1.rpy
+│   │   └── scriptA1.rpyc
+│   ├── act2
+│   ├── act3
+│   ├── act4
+│   ├── act5
+│   ├── script.rpy
+│   └── script.rpyc
+├── sprites.rpy
+├── sprites.rpyc
+├── stats.rpy
+├── stats.rpyc
+└── tl
+    └── None
+        ├── common.rpym
+        └── common.rpymc
