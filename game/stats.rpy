@@ -18,5 +18,15 @@ default perm_phone = False
 default perm_biometrics = False
 default perm_neural_hub = False
 
+## PC Variables
+default chat_open = False
+default terminal_open = False
+default explorer_open = False
+default settings_open = False
+
+default unread_chats = 0
+default unread_files = 0
+default unread_terminal = 0
+
 ## Narrative Flags
 default luna_detected = False

@@ -5,7 +5,7 @@ label splashscreen:
     pause 0.5
     
     show splash_logo with dissolve
-    play sound "audio/sfx/splash.mp3" volume 0.8 # Sourced from Plan
+    play sound "audio/sfx/splash.mp3" volume 0.8 
     pause 2.0
     hide splash_logo with dissolve
     pause 0.5
